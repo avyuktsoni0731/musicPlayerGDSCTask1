@@ -40,12 +40,68 @@ let forwardBtn = document.querySelector('.fa-forward');
 let backwardBtn = document.querySelector('.fa-backward');
 let timeSpan = document.querySelector('#time-span');
 let playerDesign = document.querySelector('.player');
+let containerDesign = document.querySelector('.container');
 let playPause = document.getElementById('playPauseBtn');
 let currentSong = 0;
 
+let mainMenu = document.querySelector('.mainMenu');
+let closeMenu = document.querySelector('.closeMenu');
+let openMenu = document.querySelector('.openMenu');
+let song0 = document.getElementById('song0');
+let song1 = document.getElementById('song1');
+let song2 = document.getElementById('song2');
+let song3 = document.getElementById('song3');
+let song4 = document.getElementById('song4');
+
+song0.addEventListener('click', () => {
+  setMusic(0);
+  mainMenu.style.top = '-100%';
+  playMusic();
+});
+song1.addEventListener('click', () => {
+  setMusic(1);
+  mainMenu.style.top = '-100%';
+  playMusic();
+});
+song2.addEventListener('click', () => {
+  setMusic(2);
+  mainMenu.style.top = '-100%';
+  playMusic();
+});
+song3.addEventListener('click', () => {
+  setMusic(3);
+  mainMenu.style.top = '-100%';
+  playMusic();
+});
+song4.addEventListener('click', () => {
+  setMusic(4);
+  mainMenu.style.top = '-100%';
+  playMusic();
+});
+
+openMenu.addEventListener('click', () => {
+  mainMenu.style.display = 'flex';
+  mainMenu.style.top = '0';
+});
+closeMenu.addEventListener('click', () => {
+  mainMenu.style.top = '-100%';
+});
+
+document.querySelector('.playPauseIcon').addEventListener('click', () => {
+  playPause.click();
+});
+
+document.querySelector('.fwdBtn').addEventListener('click', () => {
+  forwardBtn.click();
+});
+
+document.querySelector('.bwdBtn').addEventListener('click', () => {
+  backwardBtn.click();
+});
+
 const playMusic = () => {
   music.play();
-  playBtn.classList.remove('fa-pause');
+  playBtn.classList.remove('fa-play');
   playPause.classList.add('fa-pause');
 };
 
@@ -66,6 +122,10 @@ const setMusic = (i) => {
   playerDesign.className = '';
   playerDesign.className = 'player';
   playerDesign.classList.add(`player${i}`);
+  containerDesign.className = '';
+  containerDesign.className = 'container';
+  containerDesign.classList.add(`container${i}`);
+
   let song = allSongsList[i];
 
   songImage.src = song.img;
@@ -73,8 +133,6 @@ const setMusic = (i) => {
   songName.innerHTML = song.name;
   artistName.innerHTML = song.artist;
 };
-
-setMusic(2);
 
 forwardBtn.addEventListener('click', () => {
   if (currentSong >= allSongsList.length - 1) {

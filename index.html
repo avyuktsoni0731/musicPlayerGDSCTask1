@@ -18,6 +18,9 @@
     ></script>
   </head>
   <body>
+    <header>
+      <h1>Music Player</h1>
+    </header>
     <div class="container">
       <div class="player">
         <!-- <nav>
@@ -26,6 +29,7 @@
           </div>
           <div class="nav-circle">
             <i class="fa-solid fa-bars"></i>
+            </div>
             <div class="openMenu">
               <ul class="song-titles">
                 <li><a href="">Standing Next to You</a></li>
@@ -37,7 +41,53 @@
               </ul>
             </div>
           </div>
+        </nav>
+
+        <nav class="navbar">
+          <div class="nav-circle">
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-links">Standing Next to You</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-links">Into Your Arms</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-links">Takeaway</a></li>
+            <li class="nav-item"><a href="#" class="nav-links">Ghost</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-links">Lovers in the Night</a>
+            </li>
+          </ul>
+          <div class="nav-circle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="close-menu"><i class="fa fa-times"></i></div>
+          <div class="hamburger"></div>
         </nav> -->
+
+        <!-- nav111 -->
+
+        <nav>
+          <div class="nav-circle">
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
+          <div class="nav-circle">
+            <div class="openMenu"><i class="fa-solid fa-bars"></i></div>
+          </div>
+          <ul class="mainMenu">
+            <li><h1>Songs List</h1></li>
+            <li><a id="song0">Standing Next to You</a></li>
+            <li><a id="song1">Into Your Arms</a></li>
+            <li><a id="song2">Takeaway</a></li>
+            <li><a id="song3">Ghost</a></li>
+            <li><a id="song4">Lovers in the Night</a></li>
+            <div class="nav-circle closeMenu">
+              <i class="fa fa-times"></i>
+            </div>
+          </ul>
+        </nav>
 
         <!-- PPP -->
         <div class="songs">
@@ -49,17 +99,24 @@
             <input type="range" value="0" id="time-span" />
           </div>
           <div class="controls">
-            <div><i class="fa-solid fa-backward"></i></div>
+            <div class="bwdBtn"><i class="fa-solid fa-backward"></i></div>
             <div class="playPauseIcon">
               <i class="fa-solid fa-play" id="playPauseBtn"></i>
             </div>
-            <div><i class="fa-solid fa-forward"></i></div>
+            <div class="fwdBtn"><i class="fa-solid fa-forward"></i></div>
           </div>
         </div>
 
         <!-- PPP -->
       </div>
     </div>
+
+    <footer>
+      <span
+        >Created By <a href="#">Avyukt Soni</a> | 2023 All rights
+        reserved.</span
+      >
+    </footer>
 
     <script src="./script.js"></script>
   </body>
