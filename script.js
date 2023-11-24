@@ -42,7 +42,7 @@ let timeSpan = document.querySelector('#time-span');
 let playerDesign = document.querySelector('.player');
 let containerDesign = document.querySelector('.container');
 let playPause = document.getElementById('playPauseBtn');
-let currentSong = 0;
+let currentSong = Math.trunc(Math.random() * 5) + 1;
 
 let mainMenu = document.querySelector('.mainMenu');
 let closeMenu = document.querySelector('.closeMenu');
@@ -184,3 +184,5 @@ timeSpan.onchange = function () {
   playBtn.classList.remove('fa-play');
   playBtn.classList.add('fa-pause');
 };
+
+setMusic(currentSong);
