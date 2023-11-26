@@ -151,7 +151,7 @@ forwardBtn.addEventListener('click', () => {
 
 backwardBtn.addEventListener('click', () => {
   if (currentSong <= 0) {
-    currentSong = song.length - 1;
+    currentSong = allSongsList.length - 1;
   } else {
     currentSong--;
   }
